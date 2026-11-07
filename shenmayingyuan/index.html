@@ -1,0 +1,1033 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
+  <title>神马影院-在线影视推荐_热门电影电视剧免费观看指南</title>
+  <meta name="description" content="神马影院专题页提供2026年热门电影、电视剧、短剧与综艺在线观看指南，涵盖类型筛选、深度解析、最新更新与用户真实评论，帮你快速找到值得看的影视内容，收藏页面随时追更不迷路。">
+  <meta name="keywords" content="神马影院,神马影院在线观看,热门电影推荐,电视剧免费观看,影视追更指南">
+  <meta name="robots" content="index,follow">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎬</text></svg>">
+  <style>
+    :root{
+      --bg-dark:#0f1119;
+      --bg-card:#181b25;
+      --bg-card-hover:#1f2330;
+      --border-subtle:#2a2f3f;
+      --text-main:#e8eaf0;
+      --text-soft:#a3a8b8;
+      --text-muted:#6b7186;
+      --accent:#ff6b4a;
+      --accent-soft:#ff8e6e;
+      --accent-dim:rgba(255,107,74,0.12);
+      --neon-blue:#3d8bff;
+      --neon-purple:#9b6bff;
+      --radius-sm:8px;
+      --radius-md:14px;
+      --radius-lg:20px;
+      --shadow-card:0 4px 20px rgba(0,0,0,0.35);
+      --shadow-hover:0 8px 28px rgba(0,0,0,0.5);
+      --max-width:1200px;
+    }
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+      background:var(--bg-dark);
+      color:var(--text-main);
+      line-height:1.65;
+      -webkit-font-smoothing:antialiased;
+    }
+    a{color:inherit;text-decoration:none;}
+    img{display:block;max-width:100%;}
+    ul{list-style:none;}
+    .container{
+      max-width:var(--max-width);
+      margin:0 auto;
+      padding:0 20px;
+    }
+    /* ========== 导航 ========== */
+    .nav-top{
+      position:sticky;
+      top:0;
+      z-index:100;
+      background:rgba(15,17,25,0.92);
+      backdrop-filter:blur(12px);
+      border-bottom:1px solid var(--border-subtle);
+    }
+    .nav-inner{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      padding:12px 0;
+      flex-wrap:wrap;
+    }
+    .logo-badge{
+      display:flex;
+      align-items:center;
+      gap:8px;
+      font-weight:700;
+      font-size:1.25rem;
+      letter-spacing:0.5px;
+      color:var(--text-main);
+      white-space:nowrap;
+    }
+    .logo-icon{
+      width:34px;height:34px;
+      border-radius:10px;
+      background:linear-gradient(135deg,var(--accent),var(--neon-purple));
+      display:flex;align-items:center;justify-content:center;
+      font-size:1rem;
+      color:#fff;
+      font-weight:800;
+    }
+    .logo-badge span{color:var(--accent);}
+    .nav-links{
+      display:flex;
+      gap:4px 14px;
+      flex-wrap:wrap;
+      font-size:0.9rem;
+      color:var(--text-soft);
+    }
+    .nav-links a{
+      padding:4px 2px;
+      transition:color .2s;
+      border-bottom:2px solid transparent;
+    }
+    .nav-links a:hover{color:var(--accent);border-bottom-color:var(--accent);}
+    .nav-search-mini{
+      display:flex;
+      align-items:center;
+      background:var(--bg-card);
+      border:1px solid var(--border-subtle);
+      border-radius:30px;
+      padding:5px 12px;
+      gap:6px;
+      min-width:160px;
+    }
+    .nav-search-mini input{
+      background:transparent;
+      border:none;
+      outline:none;
+      color:var(--text-main);
+      font-size:0.85rem;
+      width:100%;
+    }
+    .nav-search-mini input::placeholder{color:var(--text-muted);}
+    .nav-search-mini button{
+      background:transparent;
+      border:none;
+      color:var(--text-soft);
+      cursor:pointer;
+      font-size:0.9rem;
+    }
+    /* ========== Banner 大标题专题型 ========== */
+    .hero-section{
+      padding:48px 0 36px;
+      background:radial-gradient(ellipse at 30% 20%,rgba(155,107,255,0.10),transparent 60%),
+                 radial-gradient(ellipse at 80% 70%,rgba(255,107,74,0.08),transparent 55%);
+      border-bottom:1px solid var(--border-subtle);
+    }
+    .hero-title{
+      font-size:2.6rem;
+      font-weight:800;
+      line-height:1.25;
+      letter-spacing:-0.5px;
+      margin-bottom:12px;
+    }
+    .hero-title em{
+      font-style:normal;
+      color:var(--accent);
+    }
+    .hero-desc{
+      font-size:1.05rem;
+      color:var(--text-soft);
+      max-width:680px;
+      margin-bottom:22px;
+    }
+    .hero-search-row{
+      display:flex;
+      gap:12px;
+      align-items:center;
+      flex-wrap:wrap;
+      margin-bottom:22px;
+    }
+    .hero-search-box{
+      flex:1;
+      min-width:220px;
+      display:flex;
+      background:var(--bg-card);
+      border:1px solid var(--border-subtle);
+      border-radius:40px;
+      padding:6px 6px 6px 20px;
+      transition:border-color .25s;
+    }
+    .hero-search-box:focus-within{border-color:var(--accent);}
+    .hero-search-box input{
+      flex:1;
+      background:transparent;
+      border:none;
+      outline:none;
+      color:var(--text-main);
+      font-size:0.95rem;
+    }
+    .hero-search-box input::placeholder{color:var(--text-muted);}
+    .hero-search-box button{
+      background:var(--accent);
+      border:none;
+      color:#fff;
+      font-weight:600;
+      padding:8px 22px;
+      border-radius:30px;
+      cursor:pointer;
+      font-size:0.9rem;
+      transition:background .2s;
+    }
+    .hero-search-box button:hover{background:var(--accent-soft);}
+    .hero-tags{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+    .hero-tag{
+      background:var(--bg-card);
+      border:1px solid var(--border-subtle);
+      padding:6px 16px;
+      border-radius:30px;
+      font-size:0.85rem;
+      color:var(--text-soft);
+      transition:all .2s;
+    }
+    .hero-tag:hover{background:var(--accent-dim);border-color:var(--accent);color:var(--accent);}
+    /* ========== 通用 Section ========== */
+    .section{padding:48px 0;border-bottom:1px solid var(--border-subtle);}
+    .section:last-of-type{border-bottom:none;}
+    .section-head{
+      display:flex;
+      justify-content:space-between;
+      align-items:baseline;
+      flex-wrap:wrap;
+      gap:8px 16px;
+      margin-bottom:28px;
+    }
+    .section-head h2{
+      font-size:1.65rem;
+      font-weight:700;
+      letter-spacing:-0.3px;
+    }
+    .section-head h2 small{
+      font-size:0.9rem;
+      font-weight:400;
+      color:var(--text-muted);
+      margin-left:10px;
+    }
+    .section-head .more-link{
+      font-size:0.88rem;
+      color:var(--text-soft);
+      border-bottom:1px dashed var(--border-subtle);
+      transition:color .2s;
+    }
+    .section-head .more-link:hover{color:var(--accent);}
+    /* ========== 卡片网格 ========== */
+    .card-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fill,minmax(250px,1fr));
+      gap:20px;
+    }
+    .media-card{
+      background:var(--bg-card);
+      border:1px solid var(--border-subtle);
+      border-radius:var(--radius-md);
+      padding:18px 16px 16px;
+      transition:transform .22s,box-shadow .22s,border-color .22s;
+    }
+    .media-card:hover{
+      transform:translateY(-4px);
+      box-shadow:var(--shadow-hover);
+      border-color:var(--accent);
+    }
+    .media-card .card-poster{
+      width:100%;
+      height:120px;
+      border-radius:var(--radius-sm);
+      margin-bottom:14px;
+      background:linear-gradient(145deg,#2a1e3d,#1a1d2e);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:2rem;
+      color:rgba(255,255,255,0.15);
+      font-weight:700;
+      letter-spacing:2px;
+    }
+    .media-card .card-title{
+      font-size:1.05rem;
+      font-weight:600;
+      margin-bottom:6px;
+      line-height:1.4;
+    }
+    .media-card .card-tags{
+      display:flex;
+      gap:6px;
+      flex-wrap:wrap;
+      margin-bottom:8px;
+    }
+    .tag-item{
+      font-size:0.7rem;
+      padding:2px 8px;
+      border-radius:20px;
+      background:var(--accent-dim);
+      color:var(--accent-soft);
+      letter-spacing:0.2px;
+    }
+    .tag-item.type-tag{
+      background:rgba(61,139,255,0.12);
+      color:var(--neon-blue);
+    }
+    .media-card .card-desc{
+      font-size:0.85rem;
+      color:var(--text-soft);
+      display:-webkit-box;
+      -webkit-line-clamp:2;
+      -webkit-box-orient:vertical;
+      overflow:hidden;
+      margin-bottom:12px;
+      line-height:1.55;
+    }
+    .card-meta{
+      display:flex;
+      justify-content:space-between;
+      font-size:0.75rem;
+      color:var(--text-muted);
+    }
+    .card-meta .heat{color:var(--accent);}
+    /* ========== 最新更新列表 ========== */
+    .update-list{
+      display:grid;
+      grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+      gap:14px;
+    }
+    .update-item{
+      display:flex;
+      gap:14px;
+      background:var(--bg-card);
+      border:1px solid var(--border-subtle);
+      border-radius:var(--radius-md);
+      padding:14px 16px;
+      transition:border-color .2s;
+    }
+    .update-item:hover{border-color:var(--accent);}
+    .update-icon{
+      font-size:1.2rem;
+      width:40px;height:40px;
+      border-radius:50%;
+      background:var(--accent-dim);
+      display:flex;align-items:center;justify-content:center;
+      flex-shrink:0;
+      color:var(--accent);
+    }
+    .update-body{flex:1;}
+    .update-body .update-title{font-weight:600;font-size:0.92rem;margin-bottom:2px;}
+    .update-body .update-desc{font-size:0.8rem;color:var(--text-soft);}
+    .update-body .update-time{font-size:0.7rem;color:var(--text-muted);margin-top:4px;}
+    /* ========== 分类入口 ========== */
+    .cat-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fill,minmax(130px,1fr));
+      gap:14px;
+    }
+    .cat-item{
+      background:var(--bg-card);
+      border:1px solid var(--border-subtle);
+      border-radius:var(--radius-md);
+      padding:18px 12px;
+      text-align:center;
+      transition:all .2s;
+      cursor:pointer;
+    }
+    .cat-item:hover{
+      background:var(--bg-card-hover);
+      border-color:var(--accent);
+      transform:translateY(-2px);
+    }
+    .cat-icon{font-size:1.8rem;margin-bottom:6px;display:block;}
+    .cat-name{font-size:0.9rem;font-weight:500;}
+    .cat-count{font-size:0.7rem;color:var(--text-muted);margin-top:2px;}
+    /* ========== 深度解析正文 ========== */
+    .deep-article{
+      max-width:820px;
+    }
+    .deep-article p{
+      font-size:0.98rem;
+      color:var(--text-soft);
+      margin-bottom:18px;
+      line-height:1.85;
+    }
+    .deep-article h3{
+      font-size:1.2rem;
+      font-weight:600;
+      margin:28px 0 12px;
+      color:var(--text-main);
+    }
+    .deep-article strong{color:var(--accent);font-weight:600;}
+    /* ========== FAQ 双栏问答 ========== */
+    .faq-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:18px;
+    }
+    .faq-item{
+      background:var(--bg-card);
+      border:1px solid var(--border-subtle);
+      border-radius:var(--radius-md);
+      padding:20px;
+      transition:border-color .2s;
+    }
+    .faq-item:hover{border-color:var(--accent);}
+    .faq-q{
+      font-weight:600;
+      font-size:0.95rem;
+      margin-bottom:8px;
+      color:var(--text-main);
+      display:flex;
+      gap:8px;
+    }
+    .faq-q .q-mark{color:var(--accent);font-weight:800;}
+    .faq-a{
+      font-size:0.87rem;
+      color:var(--text-soft);
+      line-height:1.75;
+      padding-left:20px;
+    }
+    /* ========== 评论 ========== */
+    .comment-list{display:flex;flex-direction:column;gap:14px;}
+    .comment-item{
+      background:var(--bg-card);
+      border:1px solid var(--border-subtle);
+      border-radius:var(--radius-md);
+      padding:16px 18px;
+      display:flex;
+      gap:14px;
+      transition:border-color .2s;
+    }
+    .comment-item:hover{border-color:var(--border-subtle);}
+    .comment-avatar{
+      width:42px;height:42px;
+      border-radius:50%;
+      background:linear-gradient(135deg,var(--neon-purple),var(--neon-blue));
+      display:flex;align-items:center;justify-content:center;
+      color:#fff;
+      font-weight:700;
+      font-size:1rem;
+      flex-shrink:0;
+    }
+    .comment-body{flex:1;}
+    .comment-head{
+      display:flex;
+      align-items:baseline;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-bottom:4px;
+    }
+    .comment-name{font-weight:600;font-size:0.9rem;}
+    .comment-date{font-size:0.72rem;color:var(--text-muted);}
+    .comment-text{font-size:0.88rem;color:var(--text-soft);line-height:1.7;}
+    /* ========== 资讯卡片 ========== */
+    .news-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fill,minmax(320px,1fr));
+      gap:18px;
+    }
+    .news-card{
+      background:var(--bg-card);
+      border:1px solid var(--border-subtle);
+      border-radius:var(--radius-md);
+      padding:18px 20px;
+      transition:all .2s;
+    }
+    .news-card:hover{border-color:var(--accent);transform:translateY(-2px);}
+    .news-date{font-size:0.72rem;color:var(--accent);margin-bottom:6px;letter-spacing:0.5px;}
+    .news-title{font-weight:600;font-size:1rem;margin-bottom:8px;line-height:1.4;}
+    .news-summary{font-size:0.85rem;color:var(--text-soft);line-height:1.65;}
+    /* ========== 体验指南小模块 ========== */
+    .guide-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fill,minmax(200px,1fr));
+      gap:16px;
+    }
+    .guide-card{
+      background:var(--bg-card);
+      border:1px solid var(--border-subtle);
+      border-radius:var(--radius-md);
+      padding:20px 16px;
+    }
+    .guide-card .guide-icon{font-size:1.6rem;margin-bottom:10px;display:block;}
+    .guide-card h4{font-size:0.98rem;margin-bottom:6px;font-weight:600;}
+    .guide-card p{font-size:0.82rem;color:var(--text-soft);line-height:1.6;}
+    /* ========== 页脚 ========== */
+    .footer{
+      background:#0b0d14;
+      border-top:1px solid var(--border-subtle);
+      padding:40px 0 30px;
+      color:var(--text-muted);
+      font-size:0.82rem;
+    }
+    .footer-inner{
+      display:grid;
+      grid-template-columns:2fr 1fr 1fr;
+      gap:30px;
+      margin-bottom:28px;
+    }
+    .footer-brand .logo-badge{margin-bottom:12px;}
+    .footer-brand p{font-size:0.82rem;line-height:1.7;max-width:360px;}
+    .footer-col h5{color:var(--text-soft);font-size:0.85rem;margin-bottom:10px;letter-spacing:0.5px;}
+    .footer-col a{display:block;color:var(--text-muted);font-size:0.8rem;padding:3px 0;transition:color .2s;}
+    .footer-col a:hover{color:var(--accent);}
+    .footer-bottom{
+      border-top:1px solid var(--border-subtle);
+      padding-top:20px;
+      display:flex;
+      justify-content:space-between;
+      flex-wrap:wrap;
+      gap:10px;
+      font-size:0.75rem;
+    }
+    /* ========== 响应式 ========== */
+    @media (max-width:768px){
+      .hero-title{font-size:1.8rem;}
+      .hero-desc{font-size:0.92rem;}
+      .nav-links{display:none;}
+      .nav-search-mini{min-width:120px;}
+      .section-head h2{font-size:1.3rem;}
+      .faq-grid{grid-template-columns:1fr;}
+      .footer-inner{grid-template-columns:1fr;gap:20px;}
+      .card-grid{grid-template-columns:1fr 1fr;}
+      .cat-grid{grid-template-columns:repeat(3,1fr);}
+      .update-list{grid-template-columns:1fr;}
+      .news-grid{grid-template-columns:1fr;}
+      .guide-grid{grid-template-columns:1fr 1fr;}
+      .comment-item{padding:12px;}
+    }
+    @media (max-width:480px){
+      .card-grid{grid-template-columns:1fr;}
+      .cat-grid{grid-template-columns:repeat(2,1fr);}
+      .guide-grid{grid-template-columns:1fr;}
+      .hero-search-row{flex-direction:column;align-items:stretch;}
+    }
+  </style>
+</head>
+<body>
+
+<!-- ========== 导航 ========== -->
+<header class="nav-top">
+  <div class="container nav-inner">
+    <div class="logo-badge">
+      <span class="logo-icon">神</span>
+      <span>神马影院</span>
+    </div>
+    <nav class="nav-links" aria-label="主导航">
+      <a href="/#hot-recommend">热门推荐</a>
+      <a href="/#latest-update">最新更新</a>
+      <a href="/#cat-entry">分类入口</a>
+      <a href="/#deep-analysis">深度解析</a>
+      <a href="/#faq-section">常见问题</a>
+      <a href="/#user-comments">用户评论</a>
+      <a href="/#news-section">影视资讯</a>
+    </nav>
+    <div class="nav-search-mini">
+      <input type="text" placeholder="搜片名、演员…" aria-label="搜索影视内容">
+      <button aria-label="搜索">⌕</button>
+    </div>
+  </div>
+</header>
+
+<!-- ========== 首屏 Banner ========== -->
+<section class="hero-section">
+  <div class="container">
+    <h1 class="hero-title"><em>神马影院</em>：热门影视在线观看与追更推荐指南</h1>
+    <p class="hero-desc">聚合2026年高口碑电影、热播电视剧、竖屏短剧与下饭综艺，提供类型筛选与编辑精选，帮你告别片荒。从首页推荐到深度解析，一个页面掌握当前值得看的影视内容。</p>
+    <div class="hero-search-row">
+      <div class="hero-search-box">
+        <input type="text" placeholder="输入片名、演员或类型，例如“悬疑”“2026新剧”…" aria-label="搜索影视内容">
+        <button>搜索</button>
+      </div>
+    </div>
+    <div class="hero-tags">
+      <a href="/#hot-recommend" class="hero-tag">🔥 本周热播</a>
+      <a href="/#latest-update" class="hero-tag">📺 最新上线</a>
+      <a href="/#cat-entry" class="hero-tag">🎬 电影</a>
+      <a href="/#cat-entry" class="hero-tag">📺 电视剧</a>
+      <a href="/#cat-entry" class="hero-tag">⚡ 短剧</a>
+      <a href="/#cat-entry" class="hero-tag">🎭 综艺</a>
+      <a href="/#deep-analysis" class="hero-tag">📝 深度解析</a>
+      <a href="/#faq-section" class="hero-tag">❓ 观影指南</a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 内容简介 ========== -->
+<section class="section" id="intro-section">
+  <div class="container">
+    <div class="section-head">
+      <h2>关于神马影院专题页 <small>为什么值得收藏</small></h2>
+    </div>
+    <div class="deep-article">
+      <p><strong>神马影院</strong>作为影视内容聚合专题页，核心解决的是“今晚看什么、最近有什么值得追”的选片焦虑。页面围绕当前热门电影、电视剧、短剧和综艺，提供类型标签、看点摘要和更新动态，让不同偏好的观众都能快速定位到符合自己口味的内容。无论你是悬疑剧爱好者、甜宠短剧受众，还是周末想找一部高分电影放松，这里都能提供参考。</p>
+      <p>本页适合三类人群：一是习惯提前看口碑再决定是否开追的谨慎型观众；二是追更多部作品、需要集中管理进度的追剧党；三是想拓展观影范围、从推荐中发现冷门佳作的探索型用户。页面整理了编辑推荐、用户评论和常见问题，帮助你在选择内容之前有一个相对全面的判断依据，而不是盲目点开试看。</p>
+      <p>值得收藏的原因在于，影视内容的热度和上线状态变化很快，<strong>神马影院</strong>页面会围绕最新更新和热门推荐持续补充动态信息。把本页加入浏览器书签，下次打开就能直接看到当前阶段值得关注的片单，省去在多个平台之间来回切换的时间成本。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 热门推荐 ========== -->
+<section class="section" id="hot-recommend">
+  <div class="container">
+    <div class="section-head">
+      <h2>热门内容推荐 <small>编辑精选 · 本周高热度</small></h2>
+      <a href="/#latest-update" class="more-link">查看更多更新 →</a>
+    </div>
+    <div class="card-grid">
+      <div class="media-card">
+        <div class="card-poster">🎬</div>
+        <div class="card-title">《雾港谜案》</div>
+        <div class="card-tags"><span class="tag-item type-tag">悬疑剧</span><span class="tag-item">烧脑</span><span class="tag-item">刑侦</span></div>
+        <div class="card-desc">一桩二十年悬案重启，双线叙事层层反转，前三集节奏略慢但第四集开始封神。</div>
+        <div class="card-meta"><span>热度 9823</span><span class="heat">更新至第12集</span></div>
+      </div>
+      <div class="media-card">
+        <div class="card-poster">🎞️</div>
+        <div class="card-title">《海边电影院》</div>
+        <div class="card-tags"><span class="tag-item type-tag">文艺片</span><span class="tag-item">治愈</span><span class="tag-item">人生</span></div>
+        <div class="card-desc">小城放映员与癌症患者的忘年交，台词克制但后劲极大，适合安静夜晚独自观看。</div>
+        <div class="card-meta"><span>热度 8760</span><span class="heat">豆瓣8.4</span></div>
+      </div>
+      <div class="media-card">
+        <div class="card-poster">📱</div>
+        <div class="card-title">《总裁的替身新娘》</div>
+        <div class="card-tags"><span class="tag-item type-tag">短剧</span><span class="tag-item">甜宠</span><span class="tag-item">反转</span></div>
+        <div class="card-desc">每集3分钟高密度发糖，第6集身份错位引爆弹幕，适合通勤路上刷完一季。</div>
+        <div class="card-meta"><span>热度 9210</span><span class="heat">全80集已上线</span></div>
+      </div>
+      <div class="media-card">
+        <div class="card-poster">🎭</div>
+        <div class="card-title">《即兴喜剧大乱斗》</div>
+        <div class="card-tags"><span class="tag-item type-tag">综艺</span><span class="tag-item">爆笑</span><span class="tag-item">竞技</span></div>
+        <div class="card-desc">六组喜剧人无剧本对决，第三期“社死现场”主题笑到缺氧，下饭首选。</div>
+        <div class="card-meta"><span>热度 7880</span><span class="heat">每周五更新</span></div>
+      </div>
+      <div class="media-card">
+        <div class="card-poster">🌌</div>
+        <div class="card-title">《星尘纪元》</div>
+        <div class="card-tags"><span class="tag-item type-tag">科幻</span><span class="tag-item">太空</span><span class="tag-item">史诗</span></div>
+        <div class="card-desc">国产硬科幻新尝试，特效水准在线，世界观铺陈较大，前两集需耐心进入。</div>
+        <div class="card-meta"><span>热度 8450</span><span class="heat">更新至第8集</span></div>
+      </div>
+      <div class="media-card">
+        <div class="card-poster">🍜</div>
+        <div class="card-title">《深夜食堂·中国版》</div>
+        <div class="card-tags"><span class="tag-item type-tag">治愈剧</span><span class="tag-item">美食</span><span class="tag-item">温情</span></div>
+        <div class="card-desc">每集一个食客故事，节奏舒缓，适合睡前看一集，但部分改编被指水土不服。</div>
+        <div class="card-meta"><span>热度 7230</span><span class="heat">全24集已完结</span></div>
+      </div>
+      <div class="media-card">
+        <div class="card-poster">🗡️</div>
+        <div class="card-title">《剑落长安》</div>
+        <div class="card-tags"><span class="tag-item type-tag">古装</span><span class="tag-item">武侠</span><span class="tag-item">权谋</span></div>
+        <div class="card-desc">打戏干净利落，朝堂线比江湖线更出彩，女主智商在线是加分项。</div>
+        <div class="card-meta"><span>热度 9010</span><span class="heat">更新至第18集</span></div>
+      </div>
+      <div class="media-card">
+        <div class="card-poster">🎮</div>
+        <div class="card-title">《游戏人生模拟器》</div>
+        <div class="card-tags"><span class="tag-item type-tag">动漫</span><span class="tag-item">热血</span><span class="tag-item">成长</span></div>
+        <div class="card-desc">以游戏化视角讲述社畜逆袭，画风清新，声优表现亮眼，追番体验轻松。</div>
+        <div class="card-meta"><span>热度 6690</span><span class="heat">更新至第6话</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 最新更新 ========== -->
+<section class="section" id="latest-update">
+  <div class="container">
+    <div class="section-head">
+      <h2>最新更新动态 <small>2026年11月7日 追踪</small></h2>
+    </div>
+    <div class="update-list">
+      <div class="update-item">
+        <div class="update-icon">📺</div>
+        <div class="update-body">
+          <div class="update-title">《雾港谜案》第12集上线</div>
+          <div class="update-desc">关键证人翻供，真凶线索指向意想不到的方向。</div>
+          <div class="update-time">今天 10:00</div>
+        </div>
+      </div>
+      <div class="update-item">
+        <div class="update-icon">⚡</div>
+        <div class="update-body">
+          <div class="update-title">短剧《闪婚老公是大佬》全集解锁</div>
+          <div class="update-desc">80集一次性放出，爽点密集适合周末刷完。</div>
+          <div class="update-time">今天 08:30</div>
+        </div>
+      </div>
+      <div class="update-item">
+        <div class="update-icon">🎬</div>
+        <div class="update-body">
+          <div class="update-title">电影《海边电影院》上线</div>
+          <div class="update-desc">豆瓣8.4分文艺佳作，今日起可看。</div>
+          <div class="update-time">今天 00:00</div>
+        </div>
+      </div>
+      <div class="update-item">
+        <div class="update-icon">🎭</div>
+        <div class="update-body">
+          <div class="update-title">《即兴喜剧大乱斗》第4期预告</div>
+          <div class="update-desc">下期主题“社死现场”，预告片弹幕已笑疯。</div>
+          <div class="update-time">昨天 20:00</div>
+        </div>
+      </div>
+      <div class="update-item">
+        <div class="update-icon">🌌</div>
+        <div class="update-body">
+          <div class="update-title">《星尘纪元》第8集更新</div>
+          <div class="update-desc">主角团首次遭遇外星文明，特效场面升级。</div>
+          <div class="update-time">昨天 18:00</div>
+        </div>
+      </div>
+      <div class="update-item">
+        <div class="update-icon">🗡️</div>
+        <div class="update-body">
+          <div class="update-title">《剑落长安》第18集</div>
+          <div class="update-desc">朝堂对峙戏码拉满，女主身份即将揭晓。</div>
+          <div class="update-time">11月5日</div>
+        </div>
+      </div>
+      <div class="update-item">
+        <div class="update-icon">🎞️</div>
+        <div class="update-body">
+          <div class="update-title">纪录片《大地脉动》第二季定档</div>
+          <div class="update-desc">11月15日上线，首支预告画面震撼。</div>
+          <div class="update-time">11月4日</div>
+        </div>
+      </div>
+      <div class="update-item">
+        <div class="update-icon">🎮</div>
+        <div class="update-body">
+          <div class="update-title">《游戏人生模拟器》第6话更新</div>
+          <div class="update-desc">男主首次团战高光时刻，弹幕刷屏。</div>
+          <div class="update-time">11月3日</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 分类入口 ========== -->
+<section class="section" id="cat-entry">
+  <div class="container">
+    <div class="section-head">
+      <h2>分类快捷入口 <small>按类型找到你的菜</small></h2>
+    </div>
+    <div class="cat-grid">
+      <a href="/#hot-recommend" class="cat-item">
+        <span class="cat-icon">🎬</span>
+        <span class="cat-name">电影</span>
+        <span class="cat-count">1240部</span>
+      </a>
+      <a href="/#hot-recommend" class="cat-item">
+        <span class="cat-icon">📺</span>
+        <span class="cat-name">电视剧</span>
+        <span class="cat-count">860部</span>
+      </a>
+      <a href="/#hot-recommend" class="cat-item">
+        <span class="cat-icon">⚡</span>
+        <span class="cat-name">短剧</span>
+        <span class="cat-count">2100部</span>
+      </a>
+      <a href="/#hot-recommend" class="cat-item">
+        <span class="cat-icon">🎭</span>
+        <span class="cat-name">综艺</span>
+        <span class="cat-count">340档</span>
+      </a>
+      <a href="/#hot-recommend" class="cat-item">
+        <span class="cat-icon">🎮</span>
+        <span class="cat-name">动漫</span>
+        <span class="cat-count">520部</span>
+      </a>
+      <a href="/#hot-recommend" class="cat-item">
+        <span class="cat-icon">🌍</span>
+        <span class="cat-name">纪录片</span>
+        <span class="cat-count">280部</span>
+      </a>
+      <a href="/#hot-recommend" class="cat-item">
+        <span class="cat-icon">🎵</span>
+        <span class="cat-name">音乐现场</span>
+        <span class="cat-count">160场</span>
+      </a>
+      <a href="/#hot-recommend" class="cat-item">
+        <span class="cat-icon">🔍</span>
+        <span class="cat-name">悬疑专区</span>
+        <span class="cat-count">430部</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 深度解析 ========== -->
+<section class="section" id="deep-analysis">
+  <div class="container">
+    <div class="section-head">
+      <h2>深度解析：神马影院里的选片逻辑 <small>编辑视角</small></h2>
+    </div>
+    <div class="deep-article">
+      <p>在<strong>神马影院</strong>这类影视聚合场景中，用户面对的核心问题并不是“没有内容可看”，而是“内容太多不知道从何看起”。打开任何一个平台，首页推荐位、榜单、热播标签同时涌来，很容易陷入选择瘫痪。真正有效的选片逻辑，是先明确自己想进入什么样的情绪状态，再反向匹配类型和时长。</p>
+      <h3>类型与节奏：先看消费场景</h3>
+      <p>如果你只有20分钟碎片时间，短剧和单集综艺显然比两小时电影更合适。短剧的核心吸引力在于前3秒抓人、每集结尾留钩子，<strong>神马影院</strong>页面中标注“全80集”这类信息，就是为了让用户判断是否需要一次性投入。而电视剧和电影更适合有整块时间的夜晚或周末，尤其是悬疑剧和文艺片，中途打断会直接影响沉浸感。从节奏上看，国产悬疑剧目前普遍采用“前三集铺陈、第四集开始加速”的叙事公式，了解这一点后再决定是否弃剧，能避免错过慢热型佳作。</p>
+      <h3>人物与表演：找对演员比找对类型更重要</h3>
+      <p>很多观众搜索<strong>神马影院</strong>时，实际意图是找某个演员的新作或某类角色的作品。比如喜欢“智商在线女主”的观众，会更关注古装权谋剧里女性角色的塑造深度；喜欢生活流表演的观众，则更适合都市治愈剧。我们建议在选择前先看一眼演员表，比单纯看类型标签更有效率。另外，短剧和综艺对表演的要求完全不同——短剧需要演员在极短时间内完成情绪爆发，综艺则更看重真实反应和临场发挥，两者不能互相替代。</p>
+      <h3>口碑与热度：把评论当参考而不是标准</h3>
+      <p>热度高不等于适合你。一部剧的热度可能来自话题营销，也可能来自真实口碑发酵。在<strong>神马影院</strong>的用户评论模块中，我们会保留中性甚至批评的声音，正是因为“全员夸赞”反而值得警惕。比较实用的方法是：先看3-5条不同立场的短评，如果批评点恰好是你不在意的（比如“节奏慢”对喜欢慢节奏的观众反而是加分项），那就可以放心尝试。影视消费是很私人的体验，选片指南只能缩小范围，最终判断还是要交给自己的观看感受。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 体验指南 ========== -->
+<section class="section" id="guide-section">
+  <div class="container">
+    <div class="section-head">
+      <h2>浏览体验指南 <small>让找片更顺手</small></h2>
+    </div>
+    <div class="guide-grid">
+      <div class="guide-card">
+        <span class="guide-icon">🗂️</span>
+        <h4>结构清晰</h4>
+        <p>热门推荐、最新更新、分类入口分区明确，不用在页面里反复翻找。</p>
+      </div>
+      <div class="guide-card">
+        <span class="guide-icon">📱</span>
+        <h4>移动端友好</h4>
+        <p>手机浏览自动适配单列或双列布局，通勤路上刷更新不费眼。</p>
+      </div>
+      <div class="guide-card">
+        <span class="guide-icon">🔖</span>
+        <h4>适合收藏</h4>
+        <p>把本页加入书签，下次直接看最新推荐，省去重复搜索的时间。</p>
+      </div>
+      <div class="guide-card">
+        <span class="guide-icon">🧭</span>
+        <h4>路径可延伸</h4>
+        <p>从热门卡片跳转分类，从分类回到更新列表，浏览动线自然不绕路。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FAQ ========== -->
+<section class="section" id="faq-section">
+  <div class="container">
+    <div class="section-head">
+      <h2>常见问题 <small>观影前你可能想了解</small></h2>
+    </div>
+    <div class="faq-grid">
+      <div class="faq-item">
+        <div class="faq-q"><span class="q-mark">Q</span>神马影院专题页主要提供什么内容？</div>
+        <div class="faq-a">本页是影视内容聚合推荐专题，围绕当前热门的电影、电视剧、短剧和综艺，提供编辑精选、最新更新动态、类型分类、深度解析和用户评论参考。它不是单一影片介绍页，而是帮你在众多内容中快速缩小选择范围的导航页，适合收藏后反复查看。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span class="q-mark">Q</span>第一次来应该从哪里开始看？</div>
+        <div class="faq-a">建议先看首屏下方的热门推荐卡片，每张卡片都有类型标签和简短看点，挑选2-3部感兴趣的记下来。然后对照最新更新列表，确认哪些已经完结、哪些还在追更中。如果时间有限，优先选择标注“全集已上线”的内容，可以避免等待更新的焦虑。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span class="q-mark">Q</span>短剧和电视剧在消费节奏上有什么区别？</div>
+        <div class="faq-a">短剧通常每集3-10分钟，剧情密度高、反转快，适合通勤、排队的碎片时间，但连续观看容易疲劳。电视剧单集40分钟以上，叙事更完整、人物弧光更饱满，适合晚间整块时间。选择时可以先问自己：现在是想快速获得情绪刺激，还是愿意花时间沉浸在一个长故事里。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span class="q-mark">Q</span>页面的评分和热度数据怎么参考？</div>
+        <div class="faq-a">热度反映的是当前讨论量和播放量，评分则来自观众综合反馈。两者结合看更有意义：高热度低评分可能是话题剧，低热度高评分往往是口碑佳作。建议把评分作为质量参考，热度作为时效参考，再结合自己的类型偏好做决定，不必盲目追求高分。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span class="q-mark">Q</span>如何判断一部剧是否适合自己？</div>
+        <div class="faq-a">最直接的方法是看类型标签和看点摘要，同时留意用户评论中的批评意见。如果批评集中在“节奏慢”“台词文艺”这类点，而你不介意甚至喜欢这种风格，那反而可以放心尝试。另外，主演如果是你熟悉且认可的演员，试错成本会低很多。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span class="q-mark">Q</span>类似神马影院这样的推荐页多久更新一次？</div>
+        <div class="faq-a">热门推荐和最新更新动态会根据内容上线和热度变化持续补充，短剧和综艺的更新频率最高，电影和纪录片相对稳定。建议每隔几天回来刷新一次，或者直接收藏页面，下次打开就能看到新的片单变化，不需要重新搜索。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 用户评论 ========== -->
+<section class="section" id="user-comments">
+  <div class="container">
+    <div class="section-head">
+      <h2>用户评论 <small>近期真实讨论</small></h2>
+    </div>
+    <div class="comment-list">
+      <div class="comment-item">
+        <div class="comment-avatar">追</div>
+        <div class="comment-body">
+          <div class="comment-head"><span class="comment-name">追剧不熬夜</span><span class="comment-date">2026-11-06</span></div>
+          <div class="comment-text">《雾港谜案》第12集看完直接失眠，证人翻供那段镜头语言太绝了，但真心建议攒多几集再看，一周一集太折磨。</div>
+        </div>
+      </div>
+      <div class="comment-item">
+        <div class="comment-avatar">海</div>
+        <div class="comment-body">
+          <div class="comment-head"><span class="comment-name">海边散步者</span><span class="comment-date">2026-11-05</span></div>
+          <div class="comment-text">《海边电影院》后劲太大了，看完在阳台坐了半小时。不是那种催泪片，但每个细节都往心里钻，适合一个人安静看。</div>
+        </div>
+      </div>
+      <div class="comment-item">
+        <div class="comment-avatar">短</div>
+        <div class="comment-body">
+          <div class="comment-head"><span class="comment-name">短剧收割机</span><span class="comment-date">2026-11-05</span></div>
+          <div class="comment-text">替身新娘那部短剧前10集确实上头，但后面剧情有点重复，跳着看也不影响。通勤刷完了，图个乐子别太较真。</div>
+        </div>
+      </div>
+      <div class="comment-item">
+        <div class="comment-avatar">剑</div>
+        <div class="comment-body">
+          <div class="comment-head"><span class="comment-name">剑气纵横</span><span class="comment-date">2026-11-04</span></div>
+          <div class="comment-text">《剑落长安》打戏真的顶，但朝堂线比江湖线好看太多，女主和丞相那几场对手戏反复拉进度条。</div>
+        </div>
+      </div>
+      <div class="comment-item">
+        <div class="comment-avatar">星</div>
+        <div class="comment-body">
+          <div class="comment-head"><span class="comment-name">星尘观察员</span><span class="comment-date">2026-11-04</span></div>
+          <div class="comment-text">《星尘纪元》特效确实进步了，但前两集信息量太大有点劝退。坚持到第5集之后好很多，世界观铺开就顺了。</div>
+        </div>
+      </div>
+      <div class="comment-item">
+        <div class="comment-avatar">综</div>
+        <div class="comment-body">
+          <div class="comment-head"><span class="comment-name">综艺下饭王</span><span class="comment-date">2026-11-03</span></div>
+          <div class="comment-text">即兴喜剧第3期笑到拍桌子，但第4期预告看着有点尬，希望正片别垮。这类节目太依赖嘉宾状态了。</div>
+        </div>
+      </div>
+      <div class="comment-item">
+        <div class="comment-avatar">深</div>
+        <div class="comment-body">
+          <div class="comment-head"><span class="comment-name">深夜食堂常客</span><span class="comment-date">2026-11-03</span></div>
+          <div class="comment-text">中国版深夜食堂比预想中好，虽然有些改编确实水土不服，但第7集外卖员那集看哭了，生活质感拍出来了。</div>
+        </div>
+      </div>
+      <div class="comment-item">
+        <div class="comment-avatar">游</div>
+        <div class="comment-body">
+          <div class="comment-head"><span class="comment-name">游戏人生路人</span><span class="comment-date">2026-11-02</span></div>
+          <div class="comment-text">这部番画风很舒服，声优加分，但剧情推进有点慢，追起来不累也算优点吧，适合下饭。</div>
+        </div>
+      </div>
+      <div class="comment-item">
+        <div class="comment-avatar">选</div>
+        <div class="comment-body">
+          <div class="comment-head"><span class="comment-name">选择困难症患者</span><span class="comment-date">2026-11-02</span></div>
+          <div class="comment-text">每次打开视频平台都要翻半小时，这个页面把热门的都列出来还有标签，省事多了。希望更新再勤快点。</div>
+        </div>
+      </div>
+      <div class="comment-item">
+        <div class="comment-avatar">悬</div>
+        <div class="comment-body">
+          <div class="comment-head"><span class="comment-name">悬疑老饕</span><span class="comment-date">2026-11-01</span></div>
+          <div class="comment-text">雾港谜案的真凶我猜是局长，如果不是就回来删评。立帖为证。</div>
+        </div>
+      </div>
+      <div class="comment-item">
+        <div class="comment-avatar">路</div>
+        <div class="comment-body">
+          <div class="comment-head"><span class="comment-name">路人甲看剧</span><span class="comment-date">2026-10-31</span></div>
+          <div class="comment-text">说真的，现在短剧质量参差不齐，上面推荐的这部算好的了，至少演员不出戏，很多短剧演技真的很劝退。</div>
+        </div>
+      </div>
+      <div class="comment-item">
+        <div class="comment-avatar">纪</div>
+        <div class="comment-body">
+          <div class="comment-head"><span class="comment-name">纪录片爱好者</span><span class="comment-date">2026-10-30</span></div>
+          <div class="comment-text">《大地脉动》第二季等好久了，第一季每一帧都能当壁纸，希望第二季保持水准，11月15日蹲。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 相关资讯 ========== -->
+<section class="section" id="news-section">
+  <div class="container">
+    <div class="section-head">
+      <h2>影视相关资讯 <small>近期动态速览</small></h2>
+    </div>
+    <div class="news-grid">
+      <div class="news-card">
+        <div class="news-date">2026-11-07</div>
+        <div class="news-title">悬疑剧《雾港谜案》热度破万，真凶猜测引发全网讨论</div>
+        <div class="news-summary">该剧上线三周播放量持续走高，第12集翻供桥段登上热搜，观众对真凶身份众说纷纭，编剧受访表示“答案会让所有人意外”。</div>
+      </div>
+      <div class="news-card">
+        <div class="news-date">2026-11-06</div>
+        <div class="news-title">短剧市场十月报告：单月上线超300部，甜宠仍是主力</div>
+        <div class="news-summary">行业数据显示短剧供给量继续增长，都市甜宠和逆袭题材占比最高，但用户对“前3秒抓人”的要求越来越苛刻，制作门槛正在提高。</div>
+      </div>
+      <div class="news-card">
+        <div class="news-date">2026-11-05</div>
+        <div class="news-title">《海边电影院》上线首日豆瓣开分8.4，文艺片年度黑马</div>
+        <div class="news-summary">这部小成本文艺片凭借口碑逆袭，排片率虽低但上座率领先，导演发文感谢观众“愿意安静看完一个慢故事”。</div>
+      </div>
+      <div class="news-card">
+        <div class="news-date">2026-11-04</div>
+        <div class="news-title">《即兴喜剧大乱斗》口碑两极：有人笑疯有人觉得尬</div>
+        <div class="news-summary">节目以无剧本即兴对决为卖点，第三期“社死现场”出圈，但部分观众认为笑点过于依赖嘉宾个人发挥，稳定性不足。</div>
+      </div>
+      <div class="news-card">
+        <div class="news-date">2026-11-03</div>
+        <div class="news-title">《星尘纪元》特效团队揭秘：单集渲染成本刷新国产科幻纪录</div>
+        <div class="news-summary">制作方透露第8集外星文明场景耗时四个月打磨，团队参考了大量航天资料，力求在视觉效果上经得起暂停细看。</div>
+      </div>
+      <div class="news-card">
+        <div class="news-date">2026-11-02</div>
+        <div class="news-title">《剑落长安》原著粉与剧粉口碑分化，改编尺度成焦点</div>
+        <div class="news-summary">剧集对朝堂线大幅扩充，原著中戏份不多的丞相成为高人气角色，但部分书粉认为江湖线被压缩过多，双方讨论热烈。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 页脚 ========== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo-badge">
+          <span class="logo-icon">神</span>
+          <span>神马影院</span>
+        </div>
+        <p>神马影院专题页是影视内容推荐与追更指南平台，聚合电影、电视剧、短剧、综艺等热门内容，提供编辑精选、类型分类与用户讨论参考。页面内容仅作信息整理与观影参考，不提供在线播放服务。</p>
+      </div>
+      <div class="footer-col">
+        <h5>快速导航</h5>
+        <a href="/#hot-recommend">热门推荐</a>
+        <a href="/#latest-update">最新更新</a>
+        <a href="/#cat-entry">分类入口</a>
+        <a href="/#deep-analysis">深度解析</a>
+        <a href="/#faq-section">常见问题</a>
+      </div>
+      <div class="footer-col">
+        <h5>友情链接</h5>
+        <a href="/#hot-recommend">影视推荐站</a>
+        <a href="/#cat-entry">片单聚合平台</a>
+        <a href="/#news-section">影视资讯频道</a>
+        <a href="/#user-comments">观众社区</a>
+        <a href="/#intro-section">关于本页</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 神马影院专题页 · 内容仅供观影参考</span>
+      <span>免责声明：本页为影视内容推荐与信息整理页面，所有片名、评分、热度均为编辑模拟数据，不构成在线观看承诺。</span>
+    </div>
+  </div>
+</footer>
+
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</body>
+  </html>
